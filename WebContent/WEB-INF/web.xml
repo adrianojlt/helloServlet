@@ -11,7 +11,7 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>list</servlet-name>
-    <jsp-file>/WEB-INF/product/list.jsp</jsp-file>
+    <jsp-file>/product/list.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
     <servlet-name>list</servlet-name>
