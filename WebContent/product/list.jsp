@@ -50,6 +50,33 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 -->
+
+<a href="/helloServlet/index.html">home</a>
+<hr>
+
+<ul>
+	<li><a href="product">list</a></li>
+	<li><a href="#">insert</a></li>
+</ul>
+
+<hr>
+
+<h1>Product List</h1>
+        <table>
+            <tr>
+                    <td><b>Name</b></td>
+                    <td><b>Options</b></td>
+            </tr>
+ 
+            <% if ( request.getAttribute("products") != null ) {
+            	for (Product product : (List<Product>)request.getAttribute("products")) { %>
+            		<tr>
+                		<td><%= product.getName()%></td>
+                		<td><a href="product?id=<%= product.getId()%>">Details...</a></td>
+            		</tr>
+            <% }} %>
+ 
+        </table>
 	
 </body>
 

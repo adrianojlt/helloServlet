@@ -16,7 +16,9 @@ import pt.adrianz.helloservlet.beans.ProductService;
  */
 @WebServlet("/ListServlet")
 public class ProductServlet extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
+	
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -36,7 +38,7 @@ public class ProductServlet extends HttpServlet {
 		
 		String page;
 		
-		if ( id == null) { // list all
+		if ( id == null ) { // list all
 			request.setAttribute("products", service.getProducts());
 			page = "/product/list.jsp";
 		}
