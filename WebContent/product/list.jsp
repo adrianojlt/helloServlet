@@ -52,6 +52,7 @@
 -->
 
 <a href="/helloServlet/index.html">home</a>
+
 <hr>
 
 <ul>
@@ -61,22 +62,23 @@
 
 <hr>
 
-<h1>Product List</h1>
-        <table>
-            <tr>
-                    <td><b>Name</b></td>
-                    <td><b>Options</b></td>
-            </tr>
- 
-            <% if ( request.getAttribute("products") != null ) {
-            	for (Product product : (List<Product>)request.getAttribute("products")) { %>
-            		<tr>
-                		<td><%= product.getName()%></td>
-                		<td><a href="product?id=<%= product.getId()%>">Details...</a></td>
-            		</tr>
-            <% }} %>
- 
-        </table>
+	<h1>Product List</h1>
+	
+	<table>
+	    <tr>
+	            <td><b>Name</b></td>
+	            <td><b>Options</b></td>
+	    </tr>
+	
+	    <% if ( request.getAttribute("products") != null ) {
+	    	for (Product product : (List<Product>)request.getAttribute("products")) { %>
+	    		<tr>
+	        		<td><%= product.getName()%></td>
+	        		<td><a href="product?id=<%= product.getId()%>">Details...</a></td>
+	    		</tr>
+	    <% }} %>
+	
+	</table>
 	
 </body>
 
