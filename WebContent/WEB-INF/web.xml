@@ -11,6 +11,7 @@
   </context-param>
   <listener>
     <listener-class>pt.adrianz.helloservlet.servlets.MyServletContextListener</listener-class>
+    <!-- <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class> -->
   </listener>
   <servlet>
     <servlet-name>beingservlet</servlet-name>
@@ -56,6 +57,17 @@
     <servlet-name>list</servlet-name>
     <url-pattern>/list.jsp</url-pattern>
   </servlet-mapping>
+  <!--
+  <servlet>
+    <servlet-name>WebService</servlet-name>
+    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WebService</servlet-name>
+    <url-pattern>/webservice</url-pattern>
+  </servlet-mapping>
+  -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
