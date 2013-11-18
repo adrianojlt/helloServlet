@@ -11,6 +11,7 @@
   </context-param>
   <listener>
     <listener-class>pt.adrianz.helloservlet.servlets.MyServletContextListener</listener-class>
+    <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
   </listener>
   <servlet>
     <servlet-name>beingservlet</servlet-name>
@@ -56,6 +57,15 @@
     <servlet-name>list</servlet-name>
     <url-pattern>/list.jsp</url-pattern>
   </servlet-mapping>
+   <servlet>
+    <servlet-name>HelloService</servlet-name>
+    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloService</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -64,6 +74,8 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!--
   <servlet>
     <display-name>Apache-Axis Servlet</display-name>
     <servlet-name>AxisServlet</servlet-name>
@@ -91,4 +103,6 @@
     <servlet-name>AdminServlet</servlet-name>
     <url-pattern>/servlet/AdminServlet</url-pattern>
   </servlet-mapping>
+  -->
+  
 </web-app>

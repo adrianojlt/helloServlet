@@ -7,6 +7,11 @@ import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
 import javax.xml.soap.SOAPElement;
 
+/**
+ *  Web Service Endpoint SEI
+ * @author adriano
+ *
+ */
 @WebService
 //@SOAPBinding(style = Style.RPC)
 public interface WebServiceExample {
