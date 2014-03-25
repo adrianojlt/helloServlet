@@ -12,7 +12,7 @@ public class ProductService {
 		
 		products.put(1, new Product(1,"shoes", 200.12));
 		products.put(2, new Product(2,"jacket", 49.00));
-		products.put(3, new Product(2,"suit", 230.00));
+		products.put(3, new Product(3,"suit", 230.00));
 	}
 	
 	public Product getProduct(int id) {

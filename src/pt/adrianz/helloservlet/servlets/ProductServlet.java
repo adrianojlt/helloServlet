@@ -43,7 +43,7 @@ public class ProductServlet extends HttpServlet {
 			page = "/product/list.jsp";
 		}
 		else { // product detail
-			request.setAttribute("product", Integer.parseInt(id));
+			request.setAttribute("product", service.getProduct(Integer.parseInt(id)));
 			page = "/product/view.jsp";
 		}
 		
