@@ -2,6 +2,8 @@ package pt.adrianz.helloservlet.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,7 +17,7 @@ import pt.adrianz.helloservlet.beans.Product;
 /**
  * Servlet implementation class BeingJSTL
  */
-@WebServlet("/BeingJSTL")
+//@WebServlet("/BeingJSTL")
 public class BeingJSTL extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -32,11 +34,18 @@ public class BeingJSTL extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		Product p = new Product(1, "t-shirt", 200);
-
-		request.setAttribute("product", p);
+		Product shirt = new Product(1, "t-shirt", 200);
+		Product shoes = new Product(2, "shoes", 100);
 		
-		String contextPath = request.getContextPath();
+		List<Product> product = new ArrayList<Product>();
+		product.add(shirt);
+		product.add(shoes);
+
+		request.setAttribute("shirt", shirt);
+		request.setAttribute("shoes", shoes );
+		request.setAttribute("product", product);
+		
+		//String contextPath = request.getContextPath();
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("viewjstl.jsp");
 		dispatcher.forward(request, response);
