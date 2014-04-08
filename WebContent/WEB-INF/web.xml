@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
   <display-name>helloServlet</display-name>
   <context-param>
     <param-name>contextparameter</param-name>
@@ -11,7 +11,6 @@
   </context-param>
   <listener>
     <listener-class>pt.adrianz.helloservlet.servlets.MyServletContextListener</listener-class>
-    <!--  <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class> -->
   </listener>
   <servlet>
     <servlet-name>beingservlet</servlet-name>
@@ -57,8 +56,7 @@
     <servlet-name>list</servlet-name>
     <url-pattern>/list.jsp</url-pattern>
   </servlet-mapping>
-  
- <servlet>
+  <servlet>
     <servlet-name>Coffee</servlet-name>
     <servlet-class>pt.adrianz.helloservlet.servlets.CoffeeSelect</servlet-class>
   </servlet>
@@ -66,18 +64,6 @@
     <servlet-name>Coffee</servlet-name>
     <url-pattern>/CoffeeSelect.do</url-pattern>
   </servlet-mapping>
-  
-  <!--
-   <servlet>
-    <servlet-name>HelloService</servlet-name>
-    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HelloService</servlet-name>
-    <url-pattern>/hello</url-pattern>
-  </servlet-mapping>
-  -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -86,35 +72,4 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-  <!--
-  <servlet>
-    <display-name>Apache-Axis Servlet</display-name>
-    <servlet-name>AxisServlet</servlet-name>
-    <servlet-class>org.apache.axis.transport.http.AxisServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AxisServlet</servlet-name>
-    <url-pattern>/servlet/AxisServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>AxisServlet</servlet-name>
-    <url-pattern>*.jws</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>AxisServlet</servlet-name>
-    <url-pattern>/services/*</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <display-name>Axis Admin Servlet</display-name>
-    <servlet-name>AdminServlet</servlet-name>
-    <servlet-class>org.apache.axis.transport.http.AdminServlet</servlet-class>
-    <load-on-startup>100</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AdminServlet</servlet-name>
-    <url-pattern>/servlet/AdminServlet</url-pattern>
-  </servlet-mapping>
-  -->
-  
 </web-app>
