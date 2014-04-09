@@ -34,7 +34,10 @@
 		 
 		        success: function (data) {
 
-		            $("tr:has(td)").remove();
+		            //$("tr:has(td)").remove();
+		            gData = data;
+		            //console.log(data);
+		            //return;
 		 
 		            $.each(data, function (index, article) {
 		 

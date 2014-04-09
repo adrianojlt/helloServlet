@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<a href="/helloServlet/index.html">home</a>
+	<a href="/helloServlet/index.html">Home</a>
 
 	<hr>
 
@@ -16,6 +16,8 @@
 		<li><a href="product">list</a></li>
 		<li><a href="#">insert</a></li>
 	</ul>
+	
+	${requestScope.product.name}
 	
 	<hr>
 

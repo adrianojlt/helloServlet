@@ -35,7 +35,7 @@ public class BeingJSTL extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		Product shirt = new Product(1, "t-shirt", 200);
-		Product shoes = new Product(2, "shoes", 100);
+		Product shoes = new Product(2, "shoes", 150);
 		
 		List<Product> product = new ArrayList<Product>();
 		product.add(shirt);
@@ -46,6 +46,15 @@ public class BeingJSTL extends HttpServlet {
 		request.setAttribute("product", product);
 		
 		//String contextPath = request.getContextPath();
+		
+		String[] musics = {"radio", "unforgettable fire","nothing else matters"};
+		request.setAttribute("musics", musics);
+		
+		ArrayList<String> musicsArrayList = new ArrayList<String>();
+		musicsArrayList.add("radio");
+		musicsArrayList.add("unforgettable fire");
+		musicsArrayList.add("nothing else matters");
+		request.setAttribute("musicsArrayList", musicsArrayList);
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("viewjstl.jsp");
 		dispatcher.forward(request, response);

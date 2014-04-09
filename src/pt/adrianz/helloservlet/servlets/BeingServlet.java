@@ -60,7 +60,7 @@ public class BeingServlet extends HttpServlet {
 
 		out.println("<html>");
 		out.println("<body>");
-		out.println("<a href=\"/helloServlet/index.html\"> &lt;- back</a>");
+		out.println("<a href=\"/helloServlet/index.html\">Home</a>");
 		out.println("<hr>");
 		this.printHello(out);
 		out.println("<ul>");
