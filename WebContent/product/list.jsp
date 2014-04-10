@@ -51,7 +51,7 @@
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 -->
 
-<a href="/helloServlet/index.html">home</a>
+<a href="/helloServlet/index.html">Home</a>
 
 <hr>
 

@@ -18,10 +18,11 @@
 
 <body>
 	
-	<a href="/helloServlet/index.html">home</a>
+	<a href="/helloServlet/index.html">Home</a>
+
+	<hr>
 
 	<table>
-
 		<thead>
 			<tr>
 				<th>Name</th>
@@ -36,8 +37,18 @@
 				</tr>
 			</c:forEach>
 		</tbody>
-
 	</table>
+
+	<hr>
+	
+	<jsp:useBean id="shoes" class="pt.adrianz.helloservlet.beans.Product" scope="request"></jsp:useBean>
+	<jsp:getProperty property="name" name="shoes"/>
+	
+	<hr>
+	
+	All Music from an Array: ${musics} ; First Song: ${musics[0]} ; Secound Song: ${musics["1"]}
+	<br>
+	All Musics: ${musicsArrayList} ;
 
 </body>
 

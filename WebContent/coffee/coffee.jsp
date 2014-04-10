@@ -2,6 +2,8 @@
 
 <html>
     <body>
+		<a href="/helloServlet/index.html">Home</a>
+		<hr>
         <h2>Coffee Advisor Output</h2>
         <c:forEach var="type" items="${types}">
             <c:out value="${type}"/>
