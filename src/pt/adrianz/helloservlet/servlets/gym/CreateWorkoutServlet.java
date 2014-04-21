@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class GymDispatchServlet
  */
 //@WebServlet("/GymDispatchServlet")
-public class GymDispatcherServlet extends HttpServlet {
+public class CreateWorkoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public GymDispatcherServlet() {
+    public CreateWorkoutServlet() {
         super();
     }
 
@@ -28,7 +28,7 @@ public class GymDispatcherServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		RequestDispatcher view = request.getRequestDispatcher("gym/insertWorkout.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("gym/insertWorkoutBootstrap.jsp");
 		view.forward(request, response);
 	}
 

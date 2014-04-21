@@ -56,7 +56,7 @@ public class BeingJSTL extends HttpServlet {
 		musicsArrayList.add("nothing else matters");
 		request.setAttribute("musicsArrayList", musicsArrayList);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("viewjstl.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("beingJSTL.jsp");
 		dispatcher.forward(request, response);
 	}
 
