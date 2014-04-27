@@ -8,7 +8,7 @@
  	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css" rel="stylesheet">
  	<style>
 		.show-grid [class^=col-] {
-			border: 1px solid;
+			/*border: 1px solid;*/
 		}
 	</style>
 </head>
@@ -25,10 +25,23 @@
 
 			<div class="col-sm-12">
 				<label>input data</label>
+
+				<select class="form-control input-md">
+					<option>legs</option>
+					<option>Arms</option>
+				</select>
+				
+				<label class='control-label'>Peso</label>
+	           	<input autocomplete='off' class='form-control card-cvc' placeholder='' size='4' type='text'>
+
+				<label class='control-label'>Reps </label>
+	           	<input autocomplete='off' class='form-control card-cvc' placeholder='' size='4' type='text'>
+	
 			</div>
 			
 		</div>
 		
+		<!--
 		<div class="row show-grid">
 			 	  
 			<div class='col-lg-3'></div>
@@ -55,12 +68,12 @@
 
 			<div class='col-xs-3'>
 
-		 		<div class='col-xs-6'>
+		 		<div class='col-lg-6'>
 	                <label class='control-label'>Peso</label>
 	                <input autocomplete='off' class='form-control card-cvc' placeholder='' size='4' type='text'>
 	            </div>
 	
-	           	<div class='col-xs-6'>
+	           	<div class='col-lg-6'>
 	                <label class='control-label text-center'>Reps</label>
 	                <input class='form-control card-expiry-month' placeholder='' size='2' type='text'>
 	            </div>
@@ -132,10 +145,13 @@
 	            </div>
 
 	           	<div class='col-xs-12'>
-	           		<!--<h4>new button</h4>-->
-	           		<button type="button" class="btn btn-default btn-sm">
-					<span class="glyphicon glyphicon-plus"></span>
-					</button>
+	           			<div class='col-xs-12' style="margin-top: 25px;">
+	                	</div>
+	           			<div class='col-xs-12'>
+		           		<button type="button" class="btn btn-default btn-sm">
+							<span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</div>
 	            </div>
 	            
 			</div>
@@ -143,6 +159,7 @@
 			<div class='col-xs-3'></div>
 
 		</div>
+		-->
 
 
 		<!--

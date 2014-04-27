@@ -73,11 +73,11 @@
     <url-pattern>/employee.do</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>GymDispatcherServlet</servlet-name>
-    <servlet-class>pt.adrianz.helloservlet.servlets.gym.GymDispatcherServlet</servlet-class>
+    <servlet-name>CreateWorkoutServlet</servlet-name>
+    <servlet-class>pt.adrianz.helloservlet.servlets.gym.CreateWorkoutServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>GymDispatcherServlet</servlet-name>
+    <servlet-name>CreateWorkoutServlet</servlet-name>
     <url-pattern>/gym.do</url-pattern>
   </servlet-mapping>
   <welcome-file-list>

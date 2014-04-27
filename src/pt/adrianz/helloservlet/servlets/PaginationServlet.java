@@ -3,12 +3,15 @@ package pt.adrianz.helloservlet.servlets;
 import java.io.IOException;
 import java.util.List;
 
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
 
 import pt.adrianz.helloservlet.beans.Employee;
 import pt.adrianz.helloservlet.beans.EmployeeDAO;
@@ -20,12 +23,30 @@ import pt.adrianz.helloservlet.beans.EmployeeDAO;
 public class PaginationServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
+	
+	private DataSource pool; // Database connection pool
        
     /**
      * @see HttpServlet#HttpServlet()
      */
     public PaginationServlet() {
         super();
+    }
+    
+    @Override
+    public void init() throws ServletException{
+    	
+    	try {
+    		
+    		// create a JNDI initial context to be able to lookup the DataSource
+    		InitialContext ctx = new InitialContext();
+
+    		pool = (DataSource)ctx.lookup("java:comp/env/jdbc/testDB");
+    		if ( pool == null) throw new ServletException("unknown datasource");
+    	}
+    	catch (NamingException namingEx) {
+    		namingEx.printStackTrace();
+    	}
     }
 
 	/**
