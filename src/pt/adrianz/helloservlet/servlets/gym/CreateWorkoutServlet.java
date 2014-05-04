@@ -36,6 +36,18 @@ public class CreateWorkoutServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		String musclegroupID = request.getParameter( "musclegroup" );
+		String exerciceID = request.getParameter( "exercice" );
+		//String reps = request.getParameter( "reps" );
+		String[] reps = request.getParameterValues("reps");
+		
+		if ( request.getParameter("submitButton").equals("Cancel") ) { 
+			this.doGet(request, response); 
+		}
+		
+		
 	}
 
 }

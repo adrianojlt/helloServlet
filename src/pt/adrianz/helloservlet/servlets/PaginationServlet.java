@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 import pt.adrianz.helloservlet.beans.Employee;
-import pt.adrianz.helloservlet.beans.EmployeeDAO;
+import pt.adrianz.helloservlet.dao.EmployeeDAO;
 
 /**
  * Servlet implementation class PaginationServlet
