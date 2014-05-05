@@ -13,4 +13,9 @@
      maxActive="100" maxIdle="30" maxWait="10000" removeAbandoned="true"
      username="root" password="" driverClassName="com.mysql.jdbc.Driver"
      url="jdbc:mysql://localhost:3306/helloservlet" />
+     
+  <Resource name="jdbc/gym" auth="Container" type="javax.sql.DataSource"
+     maxActive="100" maxIdle="30" maxWait="10000" removeAbandoned="true"
+     username="root" password="" driverClassName="com.mysql.jdbc.Driver"
+     url="jdbc:mysql://localhost:3306/gymlogger" />
 </Context>

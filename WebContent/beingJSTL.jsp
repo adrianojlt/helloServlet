@@ -46,7 +46,7 @@
 	
 	<hr>
 	
-	All Music from an Array: ${musics} ; First Song: ${musics[0]} ; Secound Song: ${musics["1"]}
+	All Music from an Array: ${musics} ; First Song: ${musics[0]} ; Second Song: ${musics["1"]}
 	<br>
 	All Musics: ${musicsArrayList} ;
 
