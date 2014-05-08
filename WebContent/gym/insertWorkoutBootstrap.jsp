@@ -59,6 +59,7 @@
 						<option>...</option>
 						<option>arm bar</option>
 						-->
+						<option value="0">...</option>
 						<c:forEach var="row" items="${exercice.rows}">
 							<option value="${row.id_MuscleGroup}">${row.name}</option>
 						</c:forEach>

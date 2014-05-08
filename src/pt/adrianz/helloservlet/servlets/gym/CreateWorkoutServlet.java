@@ -1,6 +1,7 @@
 package pt.adrianz.helloservlet.servlets.gym;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,18 +10,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import pt.adrianz.helloservlet.dao.GymDAO;
+
 /**
  * Servlet implementation class GymDispatchServlet
  */
 //@WebServlet("/GymDispatchServlet")
 public class CreateWorkoutServlet extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
+	private GymDAO gymDAO;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
     public CreateWorkoutServlet() {
         super();
+    }
+    
+    @Override
+    public void init() {
+    	this.gymDAO = new GymDAO();
     }
 
 	/**
@@ -37,17 +47,29 @@ public class CreateWorkoutServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
-		String musclegroupID = request.getParameter( "musclegroup" );
-		String exerciceID = request.getParameter( "exercice" );
-		//String reps = request.getParameter( "reps" );
-		String[] reps = request.getParameterValues("reps");
-		
 		if ( request.getParameter("submitButton").equals("Cancel") ) { 
 			this.doGet(request, response); 
 		}
 		
-		
-	}
+		PrintWriter out = response.getWriter();
 
+		response.setContentType("text/html");
+
+		String musclegroupID = request.getParameter( "musclegroup" );
+		String exerciceID = request.getParameter( "exercice" );
+		//String reps = request.getParameter( "reps" );
+		String[] reps = request.getParameterValues("reps");
+
+		out.println("<html>");
+		out.println(musclegroupID);
+		out.println("<br>");
+		out.println(exerciceID);
+		out.println("<br>");
+		
+		for ( String item : reps ) {
+			out.println(item);
+			out.println(" ; ");
+		}
+		out.println("</html>");
+	}
 }
