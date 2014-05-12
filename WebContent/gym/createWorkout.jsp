@@ -30,7 +30,7 @@
 
 	<form name="workout" method="post" action="/helloServlet/gym.do">
 
-	<div class="container">
+	<div id="main-container" class="container">
 
 		<div class="page-header">
         	<!-- <h3>Inserir workout</h3> -->
@@ -76,29 +76,9 @@
 
 			</div>
 
-			<div class='col-md-4'>
+			<div class='col-md-4 exercice'>
 
-				<div class="row">
-
-			 		<div class='col-xs-4'>
-		                <label class='control-label'>Peso</label>
-		                <input class='form-control' name="weight" placeholder='' size='3' type='text'>
-		            </div>
-		
-		           	<div class='col-xs-4'>
-		                <label class='control-label text-center'>Reps</label>
-		                <input class='form-control' name="reps" placeholder='' size='2' type='text'>
-		            </div>
-	
-			 		<div class='col-md-4'>
-		           		<button type="button" id="btn-add-repetition" class="btn btn-default btn-sm" style="margin-top: 25px;">
-							<span class="glyphicon glyphicon-minus"></span>
-						</button>
-			 		</div>
-		 		
-		 		</div>
-		 		
-		 			<div class="row">
+				<div class="row row-exercice">
 
 			 		<div class='col-xs-4'>
 		                <label class='control-label'>Peso</label>
@@ -117,6 +97,28 @@
 			 		</div>
 		 		
 		 		</div>
+		 		
+		 		<!--
+		 		<div class="row">
+
+			 		<div class='col-xs-4'>
+		                <label class='control-label'>Peso</label>
+		                <input class='form-control' name="weight" placeholder='' size='3' type='text'>
+		            </div>
+		
+		           	<div class='col-xs-4'>
+		                <label class='control-label text-center'>Reps</label>
+		                <input class='form-control' name="reps" placeholder='' size='2' type='text'>
+		            </div>
+	
+			 		<div class='col-md-4'>
+		           		<button type="button" id="btn-add-repetition" class="btn btn-default btn-sm" style="margin-top: 25px;">
+							<span class="glyphicon glyphicon-plus"></span>
+						</button>
+			 		</div>
+		 		
+		 		</div>
+		 		-->
 	            
 			</div>
 

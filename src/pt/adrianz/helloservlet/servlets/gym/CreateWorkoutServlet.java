@@ -32,6 +32,11 @@ public class CreateWorkoutServlet extends HttpServlet {
     public void init() {
     	this.gymDAO = new GymDAO();
     }
+    
+    @Override
+    public void destroy() {
+    	gymDAO.close();
+    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
