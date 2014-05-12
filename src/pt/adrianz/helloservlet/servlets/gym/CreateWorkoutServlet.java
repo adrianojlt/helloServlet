@@ -38,7 +38,12 @@ public class CreateWorkoutServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		RequestDispatcher view = request.getRequestDispatcher("gym/insertWorkoutBootstrap.jsp");
+		GymDAO gymDAO = new GymDAO();
+		request.setAttribute("exercices", gymDAO.getExercices());
+		request.setAttribute("musclegroup", gymDAO.getMuscleGroups());
+		gymDAO.close();
+		
+		RequestDispatcher view = request.getRequestDispatcher("gym/createWorkout.jsp");
 		view.forward(request, response);
 	}
 
