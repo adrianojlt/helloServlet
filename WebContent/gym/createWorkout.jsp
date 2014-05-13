@@ -46,7 +46,7 @@
 
 				<div class='col-md-12'>
 	                <label class='control-label'>Grupo</label>
-			 		<select class="form-control input-md" name="musclegroup">
+			 		<select class="form-control input-md musclegroupSelect" name="musclegroup-01">
 						<option value="0">All</option>
 						<c:forEach var="row" items="${musclegroup}">
 							<option value="${row.id}">${row.name}</option>
@@ -56,11 +56,7 @@
 
 	 			<div class='col-md-12'>
 	                <label class='control-label'>Exercicio</label>
-			 		<select class="form-control input-md" name="exercice">
-			 			<!--
-						<option>...</option>
-						<option>arm bar</option>
-						-->
+			 		<select class="form-control input-md exerciceSelect" name="exercice-01">
 						<option value="0">...</option>
 						<c:forEach var="row" items="${exercices}">
 							<option value="${row.id}">${row.name}</option>
@@ -69,7 +65,8 @@
 				</div>
 
 				<div class='col-md-4'>
-					<button type="button" id="btn-add-exercice" class="btn btn-default btn-sm" style="margin-top: 25px;">
+					<input type="hidden" name="" value="" />
+					<button type="button" id="btn-add-exercice" class="btn btn-default btn-sm disabled" style="margin-top: 25px;">
 						<span class="glyphicon glyphicon-plus"></span>
 					</button>
 				</div>
@@ -82,16 +79,16 @@
 
 			 		<div class='col-xs-4'>
 		                <label class='control-label'>Peso</label>
-		                <input class='form-control' name="weight" placeholder='' size='3' type='text'>
+		                <input id="weight-01-01" class='form-control' name="weight-01-01" placeholder='' size='3' type='text' disabled>
 		            </div>
 		
 		           	<div class='col-xs-4'>
 		                <label class='control-label text-center'>Reps</label>
-		                <input class='form-control' name="reps" placeholder='' size='2' type='text'>
+		                <input id="reps-01-01" class='form-control' name="reps-01-01" placeholder='' size='2' type='text' disabled>
 		            </div>
 	
 			 		<div class='col-md-4'>
-		           		<button type="button" id="btn-add-repetition" class="btn btn-default btn-sm" style="margin-top: 25px;">
+		           		<button type="button" id="btn-add-repetition" class="btn btn-default btn-sm" value="addRepetition" style="margin-top: 25px;">
 							<span class="glyphicon glyphicon-plus"></span>
 						</button>
 			 		</div>

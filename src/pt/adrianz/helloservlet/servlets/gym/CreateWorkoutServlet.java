@@ -30,12 +30,12 @@ public class CreateWorkoutServlet extends HttpServlet {
     
     @Override
     public void init() {
-    	this.gymDAO = new GymDAO();
+    	//this.gymDAO = new GymDAO();
     }
     
     @Override
     public void destroy() {
-    	gymDAO.close();
+    	//gymDAO.close();
     }
 
 	/**
@@ -69,6 +69,7 @@ public class CreateWorkoutServlet extends HttpServlet {
 		String exerciceID = request.getParameter( "exercice" );
 		//String reps = request.getParameter( "reps" );
 		String[] reps = request.getParameterValues("reps");
+		//request.getpara
 
 		out.println("<html>");
 		out.println(musclegroupID);
