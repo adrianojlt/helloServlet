@@ -49,4 +49,11 @@ $(document).ready(function() {
 		evento = event;
 		console.log('02');
 	});
+
+	$('.musclegroupSelect').on('change', function(event) {
+		console.log('m01changed');
+	});
+	$('.exerciceSelect').on('change', function(event) {
+		console.log('e01changed');
+	});
 });

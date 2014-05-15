@@ -69,6 +69,7 @@ public class CreateWorkoutServlet extends HttpServlet {
 		String exerciceID = request.getParameter( "exercice" );
 		//String reps = request.getParameter( "reps" );
 		String[] reps = request.getParameterValues("reps");
+		//request.getpara
 
 		out.println("<html>");
 		out.println(musclegroupID);
