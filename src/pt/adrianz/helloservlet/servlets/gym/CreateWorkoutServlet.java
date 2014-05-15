@@ -30,12 +30,12 @@ public class CreateWorkoutServlet extends HttpServlet {
     
     @Override
     public void init() {
-    	this.gymDAO = new GymDAO();
+    	//this.gymDAO = new GymDAO();
     }
     
     @Override
     public void destroy() {
-    	gymDAO.close();
+    	//gymDAO.close();
     }
 
 	/**
@@ -76,9 +76,15 @@ public class CreateWorkoutServlet extends HttpServlet {
 		out.println(exerciceID);
 		out.println("<br>");
 		
-		for ( String item : reps ) {
-			out.println(item);
-			out.println(" ; ");
+		try {
+		
+			for ( String item : reps ) {
+					out.println(item);
+					out.println(" ; ");
+				}
+			}
+		catch(NullPointerException e) {
+			//e.printStackTrace();
 		}
 		out.println("</html>");
 	}

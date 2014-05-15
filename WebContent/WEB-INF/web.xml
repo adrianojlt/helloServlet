@@ -9,9 +9,11 @@
     <param-name>urlXpto</param-name>
     <param-value>http://www.xpto.com/folder/link.xpt</param-value>
   </context-param>
+  <!--
   <listener>
     <listener-class>pt.adrianz.helloservlet.servlets.MyServletContextListener</listener-class>
   </listener>
+  -->
   <servlet>
     <servlet-name>beingservlet</servlet-name>
     <servlet-class>pt.adrianz.helloservlet.servlets.BeingServlet</servlet-class>

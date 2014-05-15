@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Enumeration;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -47,15 +48,20 @@ public class FormServlet extends HttpServlet {
 		
 		Enumeration<String> parameterNames = request.getParameterNames();
 		ArrayList<String> allParameterNames = Collections.list(parameterNames);
-		
 		ArrayList<String> allParameterValues = new ArrayList<String>();
+
+		Map<String,String[]> allParameterMap = request.getParameterMap();
+		
 		
 		while ( parameterNames.hasMoreElements() ) {
 			allParameterValues.add(parameterNames.nextElement());
 		}
 		
+		//request.getParameterMap().
+		
 		request.setAttribute("allParameterNames", allParameterNames);
 		request.setAttribute("allParameterValues", allParameterValues);
+		request.setAttribute("allParameterMap", allParameterMap);
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("formDisplay.jsp");
 		dispatcher.forward(request, response);

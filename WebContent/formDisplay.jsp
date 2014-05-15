@@ -11,6 +11,9 @@
 		span.result {
 			color: red;
 		}
+		span.key {
+			color: blue;
+		}
 	</style>
 	
 </head>
@@ -27,9 +30,17 @@
 	
 	<hr>
 
-	parameterNames: 
+	allParameterNames: 
 	<c:forEach items="${requestScope.allParameterNames}" var="name">
-		<c:out value="${name}"></c:out> , 
+		<span class="key"> <c:out value="${name}"></c:out> </span> ,
+	</c:forEach>
+	
+	<br />
+
+	<c:forEach var="entry" items="${allParameterMap}">
+		key: <span class="key"> <c:out value="${entry.key}" /> </span>
+		value: <span class="result"> <c:out value="${entry.value[0]}" /> </span>
+		;
 	</c:forEach>
 
 </body>
