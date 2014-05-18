@@ -44,7 +44,13 @@
 			</select>  
 		</div>
 
-		<input type="submit" value="GO"/>  
+		<input type="submit" name="submitButton" value="GO"/>  
+		
+		<hr />
+
+		<div class="inputClass">01:<input type="text" name="dyn-01" value=""></input></div>
+
+		<input type="submit" name="submitButton" value="Dynamic"/>  
   
 	</form>  
 

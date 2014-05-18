@@ -41,6 +41,19 @@ public class FormServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String buttonValue = request.getParameter("submitButton");
+		
+		if ( buttonValue.equals("GO")) {
+			procForm01(request, response);
+		}
+		
+		if ( buttonValue.equals("Dynamic")) {
+			this.doGet(request, response);
+		}
+	}
+	
+	private void procForm01(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		request.setAttribute( "name" , request.getParameter("name") );
 		request.setAttribute( "pass" , request.getParameter("pass") );
 		request.setAttribute( "mail" , request.getParameter("mail") );
@@ -52,12 +65,9 @@ public class FormServlet extends HttpServlet {
 
 		Map<String,String[]> allParameterMap = request.getParameterMap();
 		
-		
 		while ( parameterNames.hasMoreElements() ) {
 			allParameterValues.add(parameterNames.nextElement());
 		}
-		
-		//request.getParameterMap().
 		
 		request.setAttribute("allParameterNames", allParameterNames);
 		request.setAttribute("allParameterValues", allParameterValues);
