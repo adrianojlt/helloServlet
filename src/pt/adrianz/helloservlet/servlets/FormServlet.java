@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class FormServlet
@@ -32,6 +33,11 @@ public class FormServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//request.setAttribute("inputIndex", 0);
+
+		HttpSession session = request.getSession();
+		if ( session.getAttribute("inputIndex") == null ) { session.setAttribute("inputIndex", 0); }
+
 		RequestDispatcher view = request.getRequestDispatcher("form.jsp");
 		view.forward(request, response);
 	}
@@ -48,8 +54,30 @@ public class FormServlet extends HttpServlet {
 		}
 		
 		if ( buttonValue.equals("Dynamic")) {
+			this.createDynamicForm(request, response);
+		}
+
+		if ( buttonValue.equals("Reset")) {
+			request.getSession().setAttribute("inputIndex", 0); 
 			this.doGet(request, response);
 		}
+	}
+	
+	private void createDynamicForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session = request.getSession();
+		
+		if ( session.getAttribute("inputIndex") == null ) { session.setAttribute("inputIndex", 0); }
+		
+		//int inputIndex = (int) request.getAttribute("inputIndex");
+		int inputIndex = (int)session.getAttribute("inputIndex");
+		inputIndex++;
+
+		//request.setAttribute("inputIndex", inputIndex);
+		session.setAttribute("inputIndex", inputIndex);
+
+		RequestDispatcher view = request.getRequestDispatcher("form.jsp");
+		view.forward(request, response);
 	}
 	
 	private void procForm01(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -12,6 +12,10 @@
 		table, th, td {
 			border: 1px solid;
 		}
+		
+		.box {
+			float: left;
+		}
 	</style>
 
 </head>
@@ -22,22 +26,32 @@
 
 	<hr>
 
-	<table>
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Price</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${requestScope.product}" var="prt">
+	<div class="box">
+		<table>
+			<thead>
 				<tr>
-					<td><c:out value="${prt.name}"></c:out></td>
-					<td><c:out value="${prt.price}"></c:out></td>
+					<th>Name</th>
+					<th>Price</th>
 				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				<c:forEach items="${requestScope.product}" var="prt">
+					<tr>
+						<td><c:out value="${prt.name}"></c:out></td>
+						<td><c:out value="${prt.price}"></c:out></td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="box">
+		<c:forEach var="i" begin="1" end="10" >
+	    	<c:out value="${i}" /> 
+	  	</c:forEach>
+	</div>
+	
+	<div style="clear: both;"></div>
 
 	<hr>
 	
