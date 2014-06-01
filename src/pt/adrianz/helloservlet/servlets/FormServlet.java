@@ -20,7 +20,11 @@ import javax.servlet.http.HttpSession;
  */
 @WebServlet("/FormServlet")
 public class FormServlet extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
+	
+	private static final String INPUT_VIEW 		= "forms/form.jsp";
+	private static final String DISPLAY_VIEW 	= "forms/formDisplay.jsp";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -38,7 +42,7 @@ public class FormServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		if ( session.getAttribute("inputIndex") == null ) { session.setAttribute("inputIndex", 0); }
 
-		RequestDispatcher view = request.getRequestDispatcher("form.jsp");
+		RequestDispatcher view = request.getRequestDispatcher(FormServlet.INPUT_VIEW);
 		view.forward(request, response);
 	}
 
@@ -58,7 +62,8 @@ public class FormServlet extends HttpServlet {
 		}
 
 		if ( buttonValue.equals("Reset")) {
-			request.getSession().setAttribute("inputIndex", 0); 
+			//request.getSession().setAttribute("inputIndex", 0); 
+			request.getSession().removeAttribute("inputIndex");
 			this.doGet(request, response);
 		}
 	}
@@ -69,14 +74,13 @@ public class FormServlet extends HttpServlet {
 		
 		if ( session.getAttribute("inputIndex") == null ) { session.setAttribute("inputIndex", 0); }
 		
-		//int inputIndex = (int) request.getAttribute("inputIndex");
 		int inputIndex = (int)session.getAttribute("inputIndex");
 		inputIndex++;
 
 		//request.setAttribute("inputIndex", inputIndex);
 		session.setAttribute("inputIndex", inputIndex);
 
-		RequestDispatcher view = request.getRequestDispatcher("form.jsp");
+		RequestDispatcher view = request.getRequestDispatcher(FormServlet.INPUT_VIEW);
 		view.forward(request, response);
 	}
 	
@@ -101,7 +105,7 @@ public class FormServlet extends HttpServlet {
 		request.setAttribute("allParameterValues", allParameterValues);
 		request.setAttribute("allParameterMap", allParameterMap);
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("formDisplay.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher(FormServlet.DISPLAY_VIEW);
 		dispatcher.forward(request, response);
 	}
 

@@ -12,6 +12,14 @@
   <listener>
     <listener-class>pt.adrianz.helloservlet.servlets.MyServletContextListener</listener-class>
   </listener>
+  
+  <!--
+  <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config> <http-only>true</http-only> </cookie-config>
+        <tracking-mode>URL</tracking-mode>
+	</session-config>
+  -->
   <servlet>
     <servlet-name>beingservlet</servlet-name>
     <servlet-class>pt.adrianz.helloservlet.servlets.BeingServlet</servlet-class>
