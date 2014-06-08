@@ -17,7 +17,7 @@ import pt.adrianz.helloservlet.beans.Product;
 /**
  * Servlet implementation class BeingJSTL
  */
-//@WebServlet("/BeingJSTL")
+@WebServlet(value="/BeingJSTL")
 public class BeingJSTL extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -26,7 +26,6 @@ public class BeingJSTL extends HttpServlet {
      */
     public BeingJSTL() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**

@@ -39,7 +39,11 @@ public class FormServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//request.setAttribute("inputIndex", 0);
 
+
+		// returns a session but you cant tell if it is a new session
+		// unless you ask the session (session.isNew)
 		HttpSession session = request.getSession();
+
 		if ( session.getAttribute("inputIndex") == null ) { session.setAttribute("inputIndex", 0); }
 
 		RequestDispatcher view = request.getRequestDispatcher(FormServlet.INPUT_VIEW);
@@ -62,7 +66,6 @@ public class FormServlet extends HttpServlet {
 		}
 
 		if ( buttonValue.equals("Reset")) {
-			//request.getSession().setAttribute("inputIndex", 0); 
 			request.getSession().removeAttribute("inputIndex");
 			this.doGet(request, response);
 		}

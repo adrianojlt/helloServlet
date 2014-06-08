@@ -1,9 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
+
 <head>
 
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" 		prefix="c" %>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 	<title>Being a JSTL</title>
@@ -60,9 +64,10 @@
 	
 	<hr>
 	
-	All Music from an Array: ${musics} ; First Song: ${musics[0]} ; Second Song: ${musics["1"]}
-	<br>
+	All Music from an Array: ${musics} ; First Song: ${musics[0]} ; Secound Song: ${musics["1"]} - 
 	All Musics: ${musicsArrayList} ;
+	<br>
+	<c:out value="${fn:length('hello')}"> </c:out>
 
 </body>
 

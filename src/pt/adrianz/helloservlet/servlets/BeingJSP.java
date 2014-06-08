@@ -10,16 +10,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class TmpServlet
+ * Servlet implementation class BeingJSP
  */
-@WebServlet("/TmpServlet")
-public class TmpServlet extends HttpServlet {
+@WebServlet(
+		name="BeingJSP",
+		description="some description",
+		urlPatterns="/beingjsp"
+)
+public class BeingJSP extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	private static final String DEFAULT_VIEW 		= "tmp/tmp.jsp";
+	private static final String VIEW 	= "jsp/beingJSP.jsp";
        
-    public TmpServlet() {
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public BeingJSP() {
         super();
     }
 
@@ -28,8 +35,8 @@ public class TmpServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		RequestDispatcher view = request.getRequestDispatcher(TmpServlet.DEFAULT_VIEW);
-		view.forward(request, response);
+		RequestDispatcher rd = request.getRequestDispatcher(BeingJSP.VIEW);
+		rd.forward(request, response);
 	}
 
 	/**
