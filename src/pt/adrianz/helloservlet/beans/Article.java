@@ -1,8 +1,10 @@
 package pt.adrianz.helloservlet.beans;
 
-import java.util.LinkedList;
 import java.util.List;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Article {
 	
 	private String title;
@@ -34,5 +36,9 @@ public class Article {
 	}
 	public void setTags(List<String> tags) {
 		this.tags = tags;
+	}
+	
+	public String toString() {
+		return "Article [title=" + title + ", url = " + url + "]";
 	}
 }
