@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+ 
+<struts-config>
+ 
+	<form-beans>
+	   <form-bean name="helloWorldForm" type="pt.adrianz.helloservlet.struts.HelloWorldForm"/>
+	</form-beans>
+ 
+	<action-mappings>
+
+	   <action 
+	   		path="/helloWorld"
+			type="pt.adrianz.helloservlet.struts.HelloWorldAction"
+			name="helloWorldForm">
+				<forward name="success" path="/struts/HelloWorld.jsp"/>
+	   </action>
+	   
+	   <action 
+	   		path="/ForwardAction"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/struts/ForwardAction.jsp" />
+	   
+	</action-mappings>
+	
+	<!-- validator plugin class include statement -->
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn" >
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml, /WEB-INF/validator-user.xml"/>
+	</plug-in>
+ 
+</struts-config>
