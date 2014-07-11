@@ -13,22 +13,31 @@
 	<action-mappings>
 
 	   <action 
-	   		path="/helloWorld"
+	   		path="/helloWorldStruts"
 			type="pt.adrianz.helloservlet.struts.HelloWorldAction"
 			name="helloWorldForm">
-				<forward name="success" path="/struts/HelloWorld.jsp"/>
+				<forward name="success" path="/struts/HelloWorldStruts.jsp"/>
 	   </action>
 	   
 	   <action 
 	   		path="/ForwardAction"
 			type="org.apache.struts.actions.ForwardAction"
 			parameter="/struts/ForwardAction.jsp" />
+
+	   <action 
+	   		path="/pageExample"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/struts/pageExample.jsp" />
 	   
 	</action-mappings>
 	
+	<message-resources parameter="pt.adrianz.helloservlet.resources.resources"/>
+	
 	<!-- validator plugin class include statement -->
+	<!-- 
 	<plug-in className="org.apache.struts.validator.ValidatorPlugIn" >
 		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml, /WEB-INF/validator-user.xml"/>
 	</plug-in>
+	 -->
  
 </struts-config>

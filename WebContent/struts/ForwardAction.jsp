@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+	<a href="/helloServlet/helloWorldStruts.do">Back</a>
 	<h1>Forward Action Example</h1>
 </body>
 
