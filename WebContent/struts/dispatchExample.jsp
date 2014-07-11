@@ -8,13 +8,13 @@
 	<%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title> Forward Action Page</title>
+	<title>DispatchExample</title>
 </head>
 
 <body>
 
-	<a href="/helloServlet/helloWorldStruts.do">Back</a>
-	<h1>Forward Action Example</h1>
+	<a href="/helloServlet/helloWorld.do">Back</a>
+	<h1>Dispatch Example</h1>
 </body>
 
 </html>
