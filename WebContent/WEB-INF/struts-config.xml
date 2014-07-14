@@ -28,6 +28,17 @@
 	   		path="/pageExample"
 			type="org.apache.struts.actions.ForwardAction"
 			parameter="/struts/pageExample.jsp" />
+
+	   <action 
+	   		path="/RegistrationForm"
+			type="pt.adrianz.helloservlet.struts.RegistrationAction"
+			name="RegistrationForm"
+			scope="request"
+			validate="true"
+			input="input">
+				<forward name="input" path="/struts/RegistrationForm.jsp" />
+				<forward name="success" path="/struts/RegistrationForm.jsp" />
+		</action>
 	   
 	</action-mappings>
 	

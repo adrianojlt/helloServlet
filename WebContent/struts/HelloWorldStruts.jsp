@@ -20,7 +20,7 @@
 
 	<p> <html:link page="/ForwardAction.do">Forward Action Example</html:link> View how struts-config.xml is configured</p>
 	<p> <html:link page="/pageExample.do">Page Example</html:link> </p>
-	<p>teste</p>
+	<p> <html:link page="/RegistrationForm.do">Registration Form</html:link> </p>
 
 </body>
 
