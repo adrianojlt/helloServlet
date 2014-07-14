@@ -5,7 +5,7 @@
 
 <head>
 
-	<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
+	<%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Page Example</title>
@@ -15,8 +15,6 @@
 
 	<a href="/helloServlet/helloWorldStruts.do">Back</a>
 	<h1>Page Example</h1>
-	<p> <% out.println(request.getHeader("User-Agent")); %> </p>
-
 </body>
 
 </html>
