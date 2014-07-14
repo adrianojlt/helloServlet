@@ -8,6 +8,7 @@
  
 	<form-beans>
 	   <form-bean name="helloWorldForm" type="pt.adrianz.helloservlet.struts.HelloWorldForm"/>
+	   <form-bean name="RegistrationForm" type="pt.adrianz.helloservlet.struts.RegistrationForm"/>
 	</form-beans>
  
 	<action-mappings>
@@ -35,7 +36,7 @@
 			name="RegistrationForm"
 			scope="request"
 			validate="true"
-			input="input">
+			input="/struts/RegistrationForm.jsp">
 				<forward name="input" path="/struts/RegistrationForm.jsp" />
 				<forward name="success" path="/struts/RegistrationForm.jsp" />
 		</action>

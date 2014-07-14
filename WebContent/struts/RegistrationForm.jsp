@@ -13,9 +13,9 @@
 
 <body>
 
-	<html:errors property="submitError"/>
+	<!--<html:errors property="submitError"/>-->
 
-	<html:form action="RegistrationForm">
+	<html:form action="RegistrationForm.do">
 		firstname: <html:text property="firstname" />
 		lastname: <html:text property="lastname" />
 		<html:submit>submit</html:submit>

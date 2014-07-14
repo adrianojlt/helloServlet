@@ -15,7 +15,8 @@ public class RegistrationAction extends Action {
 		
 		//PropertyUtils.getSimpleProperty(bean, name)
 		
-		return mapping.findForward("success");
+		//return mapping.findForward("success");
+		return mapping.getInputForward();
 	}
 
 }
