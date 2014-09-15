@@ -28,4 +28,8 @@ public class RegistrationForm extends ActionForm{
 		
 		return errors;
 	}
+	
+	public void reset(ActionMapping mapping, HttpServletRequest request) {
+
+	}
 }

@@ -51,7 +51,7 @@ public class HelloWorldRestService {
 	 
 	 @GET
 	 @Path("/article")
-	 @Produces(MediaType.APPLICATION_XML)
+	 @Produces(MediaType.APPLICATION_JSON)
 	 public Article getArticle() {
 		 
 		 Article article = new Article();

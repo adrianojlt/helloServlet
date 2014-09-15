@@ -14,12 +14,8 @@ public class ConnectionFactory {
 	private String pass = "";
 	
 	private ConnectionFactory() {
-		try {
-			Class.forName(driverClass);
-		}
-		catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		try { Class.forName(driverClass); }
+		catch (ClassNotFoundException e) { e.printStackTrace(); }
 	}
 	
 	public static ConnectionFactory getInstance() { return instance; }
