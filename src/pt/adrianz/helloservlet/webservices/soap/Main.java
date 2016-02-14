@@ -1,4 +1,4 @@
-package pt.adrianz.helloservlet.webservices;
+package pt.adrianz.helloservlet.webservices.soap;
 
 import javax.xml.ws.Endpoint;
 

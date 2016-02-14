@@ -1,4 +1,4 @@
-package pt.adrianz.helloservlet.webservices;
+package pt.adrianz.helloservlet.webservices.soap;
 
 @javax.jws.WebService(
 		endpointInterface = "pt.adrianz.helloservlet.webservices.WebServiceExample")

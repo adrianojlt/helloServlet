@@ -90,6 +90,14 @@
     <servlet-name>CreateWorkoutServlet</servlet-name>
     <url-pattern>/gym.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ParamsServlet</servlet-name>
+    <servlet-class>pt.adrianz.helloservlet.servlet.webapi.ParamsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ParamsServlet</servlet-name>
+    <url-pattern>/parameters</url-pattern>
+  </servlet-mapping>
   
   	<!-- STRUTS configuration -->
 	<servlet>
@@ -127,10 +135,11 @@
 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
 		<init-param>
 		     <param-name>com.sun.jersey.config.property.packages</param-name>
-		     <param-value>pt.adrianz.helloservlet.webservices</param-value>
+		     <param-value>pt.adrianz.helloservlet.webservices.rest</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>jersey-serlvet</servlet-name>
 		<url-pattern>/rest/*</url-pattern>

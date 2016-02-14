@@ -1,6 +1,4 @@
-package pt.adrianz.helloservlet.webservices;
-
-
+package pt.adrianz.helloservlet.webservices.rest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +14,11 @@ import pt.adrianz.helloservlet.beans.Article;
 
 @Path("/hello")
 public class HelloWorldRestService {
+	
+	@GET
+	public Response getMain() {
+		return Response.status(Response.Status.OK).entity("hello").build();
+	}
 
 	@GET
 	@Path("/{param}")

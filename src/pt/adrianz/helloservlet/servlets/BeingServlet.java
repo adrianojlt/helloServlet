@@ -29,10 +29,12 @@ public class BeingServlet extends HttpServlet {
         System.out.println("constructor");
     }
     
+    @Override
     public void init() {
         System.out.println("init");
     }
     
+    @Override
     public void destroy() {
         System.out.println("destroy");
     }
